@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="client.js"></script>
+    <title>Salary Calculator</title>
+</head>
+<body>
+    
+<header>
+    <h1>Salary Calculator</h1>
+</header>
+<h2>Add Employee</h2>
+<input id="firstName" class="inputField" type="text" placeholder="First Name" />
+<input id="lastName" class="inputField" type="text" placeholder="Last Name" />
+<input id="iD" class="inputField" type="number" placeholder="ID" />
+<input id="title" class="inputField" type="text" placeholder="Title" />
+<input id="annualSalary" class="inputField" type="number" placeholder="Annual Salary" />
+<button id = "submitButton">Submit</button>
+<main>
+    <table class = "table">
+        <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+        </thead>
+        <tbody class = "bodyRows"> 
+            <tr>
+                <td>Albert</td>
+                <td>Macintosh</td>
+                <td>34567</td>
+                <td>Big Time</td>
+                <td>234567</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Total Monthly Cost: $<span id = totalMonthlyCost>0</span></h2>
+</main>
+
+</body>
+
+</html>
