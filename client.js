@@ -12,7 +12,7 @@ function monthlyCostGenerator(num1) {               // this functions calculates
     return num1 / 12;       
 }
 
-function totalEmployeeMonthlyCost(num1, num2) {
+function totalEmployeeMonthlyCost(num1, num2) {  //function to determine what the single employee
     return num1 += num2;
 }
 
@@ -31,7 +31,7 @@ $('.bodyRows').append(
 <td>${employeeDataLast}</td>
 <td>${employeeDataID}</td>
 <td>${employeeDataTitle}</td>
-<td>${employeeMonthlyCost}</td>
+<td>${employeeDataAnnualSalary}</td>
 <td><button class = "delete">Delete</button></td>
 </tr>`);                                                //this creates space in our table and fills that space
                                                         //with the appropriate values!  it also creates out delete 
@@ -39,10 +39,8 @@ $('.bodyRows').append(
                               // resetting out input fields to nothing                      
 
 
-
-console.log(totalEmployeeMonthlyCost(totalSalary, employeeMonthlyCost));
 totalSalary = totalEmployeeMonthlyCost(totalSalary, employeeMonthlyCost)
- 
+$('#totalMonthlyCost').text(totalSalary); 
 $('.inputField').val('');
 }
 
