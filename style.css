@@ -1,3 +1,52 @@
 body {
-    background-color: aquamarine;
+    background-color: black;
+    /* background-color: rgb(105, 207, 247); */
+    text-align: center;
+}
+
+#submitButton{
+   background-color: rgb(187, 8, 187);
+}
+
+h1{
+    font-size: 4em;
+    color: rgb(97, 3, 185);
+    background-color: rgb(105, 207, 247);
+}
+::placeholder{
+    color: black;
+    opacity: 1;
+}
+
+#firstName{
+    background-color: rgb(100, 248, 248);
+}
+
+#lastName{
+    background-color: rgb(93, 225, 248);
+
+}
+#iD{
+    background-color: rgb(56, 186, 247);
+}
+
+#title{
+    background-color: blue;
+}
+
+#annualSalary{
+    background-color: blueviolet;
+}
+
+h2{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(137, 22, 245);
+}
+.jumbotron{
+    background-color: rgb(245, 156, 245);
+}
+
+.table{
+     color: rgb(100, 248, 248);
 }

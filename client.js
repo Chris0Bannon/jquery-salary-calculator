@@ -4,7 +4,7 @@ $(document).ready(readyNow) //"Hey JQuery, when the page is down loading be read
 
 function readyNow() {
     $('#submitButton').on('click', submitEmployee); //if I click the button run the function
-    $('.bodyRows').on('click', '.delete', deleteHandler) //if I click the button that doesn't exist yet
+    $('.bodyRows').on('click', '.delete', deleteHandler); //if I click the button that doesn't exist yet
     //but that will likely exist here in the future, run the function
 }
 
@@ -51,12 +51,11 @@ function submitEmployee() {
 <td>${employeeDataLast}</td>
 <td>${employeeDataID}</td>
 <td>${employeeDataTitle}</td>
-<td id = "Salary">${employeeDataAnnualSalary}</td>
+<td>${employeeDataAnnualSalary}</td>
 <td><button class = "delete" >Delete</button></td>    
 </tr>`); //this creates space in our table and fills that space
-    //with the appropriate values!  it also creates out delete 
-    //buttons!!  we need an id on the annual salary cell so that we can
-    //comeback later and snag that value incase someone gets canned                  
+    //with the appropriate values!  it also creates our delete 
+    //buttons!!                   
 
     totalSalary = totalEmployeeMonthlyCost(totalSalary, employeeMonthlyCost) // resetting our global variable
     $('#totalMonthlyCost').text(totalSalary); //updating the dom with our global variable
@@ -75,15 +74,15 @@ function submitEmployee() {
 
 function deleteHandler() {
     console.log('i clicked delete'); //does it click?
-    let Cost = $('#Salary').text(); //create a variable to hold the value of our deleted employees salary
+    let Cost = $(this).parent().prev().text(); //create a variable to hold the value of our deleted employees salary by targeting the delete key with this, then navigating to it's aunt element.
     console.log(Cost); // did we find what we wanted?
     totalSalary = totalSalary - Cost / 12; //adjusting to the monthly cost of employee rather than yearly
     console.log(totalSalary); // did we adjust our math good like?
     $('#totalMonthlyCost').text(totalSalary);
     if (totalSalary > 20000) {
-        $('#totalMonthlyCost').css("background-color", "red"); //changing totals background color if we are over budget!
+        $('#totalMonthlyCost').css("background-color", "red"); //changing the totals background color to red if we are over budget!
     } else {
-        $('#totalMonthlyCost').css("background-color", "aquamarine"); //changing the background color if we cut some cost and end up back within our budget.
+        $('#totalMonthlyCost').css("background-color", ""); //changing the background color to default if we cut some cost and end up back within our budget.
     }
-    $(this).parent().parent().remove(); // remove the row and its children that houses our delete button.   
+    $(this).parent().parent().remove(); // by removing the grandparent element of the delete element, we also delete all of the delete elements aunts and uncles.   
 }
