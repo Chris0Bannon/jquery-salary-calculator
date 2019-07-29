@@ -57,11 +57,12 @@ function submitEmployee() {
     //with the appropriate values!  it also creates our delete 
     //buttons!!                   
 
-    totalSalary = totalEmployeeMonthlyCost(totalSalary, employeeMonthlyCost) // resetting our global variable
+    totalSalary = Math.round(totalEmployeeMonthlyCost(totalSalary, employeeMonthlyCost)); // resetting our global variable
     $('#totalMonthlyCost').text(totalSalary); //updating the dom with our global variable
     if (totalSalary > 20000) {
-        $('#totalMonthlyCost').css("background-color", "red"); //changing totals background color if we are over budget!
-
+        $('.jumbotron').css("background-color", " rgb(86, 8, 187)"); //changing totals background color if we are over budget!
+        $('.h2').css("color", " rgb(86, 8, 187)");
+        $('#totalMonthlyCost').css("background-color", "blue");
     }
     $('.inputField').val(''); // resetting out input fields to nothing   
 }
@@ -76,13 +77,16 @@ function deleteHandler() {
     console.log('i clicked delete'); //does it click?
     let Cost = $(this).parent().prev().text(); //create a variable to hold the value of our deleted employees salary by targeting the delete key with this, then navigating to it's aunt element.
     console.log(Cost); // did we find what we wanted?
-    totalSalary = totalSalary - Cost / 12; //adjusting to the monthly cost of employee rather than yearly
+    totalSalary = Math.round(totalSalary - Cost / 12); //adjusting to the monthly cost of employee rather than yearly// we have to round here to avoid a mess as we approach 0. this isn't always perfect!
     console.log(totalSalary); // did we adjust our math good like?
     $('#totalMonthlyCost').text(totalSalary);
     if (totalSalary > 20000) {
-        $('#totalMonthlyCost').css("background-color", "red"); //changing the totals background color to red if we are over budget!
+        $('.jumbotron').css("background-color", "rgb(86, 8, 187)"); //changing the totals background color to red if we are over budget!
     } else {
-        $('#totalMonthlyCost').css("background-color", ""); //changing the background color to default if we cut some cost and end up back within our budget.
+        $('.jumbotron').css("background-color", "blue");
+        $('.h2').css("color", "white"); //changing the background color to default if we cut some cost and end up back within our budget.
+        $('#totalMonthlyCost').css("background-color", "rgb(86, 8, 187) ");
+
     }
     $(this).parent().parent().remove(); // by removing the grandparent element of the delete element, we also delete all of the delete elements aunts and uncles.   
 }

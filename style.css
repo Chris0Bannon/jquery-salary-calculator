@@ -5,12 +5,14 @@ body {
 }
 
 #submitButton{
-   background-color: rgb(187, 8, 187);
+   background-color: rgb(86, 8, 187);
 }
+
 
 h1{
     font-size: 4em;
-    color: rgb(97, 3, 185);
+    
+    /* color: rgb(97, 3, 185); */
     background-color: rgb(105, 207, 247);
 }
 ::placeholder{
@@ -35,18 +37,22 @@ h1{
 }
 
 #annualSalary{
-    background-color: blueviolet;
+    background-color: rgb(112, 39, 230);
 }
 
 h2{
     font-size: 3em;
     text-align: center;
-    color: rgb(137, 22, 245);
+    color: white;
 }
 .jumbotron{
-    background-color: rgb(245, 156, 245);
+    background-color:blue;
 }
 
 .table{
      color: rgb(100, 248, 248);
+}
+
+#totalMonthlyCost{
+    background-color: rgb(86, 8, 187);
 }
