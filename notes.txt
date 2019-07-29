@@ -1,0 +1,67 @@
+Things the squad struggled with:
+    - variable Naming Conventions.
+        Make your variables as long and descriptive as possible.
+        Say what the element, variable, or function does,
+        avoid using abbreviations
+    - strings to Numbers.
+        use the debugger to track the data type!
+        using the correct order of operations with your functions and 
+            algebra should get you in the write spot.  Think what data 
+            type you are using and what you expect to output as you write
+            your functions
+        you can use Number() to change it
+        or the parseInt()/float() to change it
+
+
+    - Forms.
+        -don't use the forms for now!  they are tricky and their own animal.  THey redirect you to another page.
+    - Ancestors/ DOM traversal.
+        What element are you starting in?
+        where do you want to go?
+        think about the family tree like it is a map!
+        then plan your route.
+            you can use .closest('element type, id or class')
+            CHECK THE API YOU STUPID NUUUUUB!!!
+                https://api.jquery.com/category/traversing/
+    - getting monthly total to the DOM.
+        ez
+    - remove salary update (stretch).
+        ez
+    - adding in currency formating.
+        Google .toLocaleString() and then do that stuff
+        i guess its like super easy.  do it at the end of your math though it will goof you big time
+        or something idk it didn't work when our instructor did it!!!!
+    - order of things in function.
+        it depends on what your DOING!!! you hae to logically understand what needs to be Done
+        to get to the next step.  There is no all encompassing formula. Thats what makes it hard.
+    - best practices for googling things.
+        make sure that you are using specific parameters.  Ex.  search for how to do a thing in Jquery not just how to do a thing.
+        check your search responses and make sure that they are current.  Use the past year search function on GOOGLE.
+        see the vids on week 3!
+
+    How did you start your project?
+        Usually you will start in an HTML Document. Take very small steps and check your work as you go.  
+        Then you gotta source your files and make sure that you have your frameworks sourced as well.
+        Double check to make sure that all of your sourced files are sourced in the proper order.
+        Start your $Document.ready(readyNow);
+        then start writing your function readyNow().
+
+our page needs, and get them into HTML first.  Things like inputs, buttons, tables, headers, etc.
+Add them one at a time and refresh your page after each so that you are sure things are going according to plan.
+ALWAYS REFRESH!!! Your not a super computer, you will miss a character eventually, and refreshing often will
+show you exactly where that is.
+
+Where will your page or app beh dynamic?  identify that area and then create functions related to them.
+create onclick, onhover, deletehandler.  set them up one at a time, and attach those event listeners to 
+a simple function with only a console log so that you can test that those interactions interactions
+
+If you have html elements that will be added by added by JS functions, go ahead and make em in the html!
+that way you can be sure that they look the way you want and you code is accurate.  You can comment them out
+and cut and paste them into your script later.
+if you appending variables into your html elements test adding them one at a time!!
+make sure that you give your HTML elements good ids or classes as you go so that you don't 
+accidentally confuse your scripts later on!
+
+Take some time to think about what it is your functions will actually be doing, write them in one at a time,
+and one line at a time.  testing as you go.  
+
